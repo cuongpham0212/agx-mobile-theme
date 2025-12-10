@@ -1,0 +1,10 @@
+agx-mobile-theme/
+│
+├── go.mod
+├── layouts/
+│     └── mobile/
+│            ├── baseof.html
+│            ├── index.html
+│            └── single.html
+└── assets/
+       └── css/mobile.css
