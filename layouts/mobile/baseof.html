@@ -1,19 +1,17 @@
+{{ define "mobile_base" }}
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} | AGX Mobile</title>
-    <link rel="stylesheet" href="/css/mobile.css">
+    {{ partial "mobile/head.html" . }}
 </head>
+<body class="mobile">
+    {{ partial "mobile/header.html" . }}
 
-<body style="background:#fdfdfd">
-    <header style="padding:15px; background:#222; color:#fff;">
-        AGX Mobile
-    </header>
-
-    <main style="padding:15px;">
+    <main class="mobile-container">
         {{ block "main" . }}{{ end }}
     </main>
+
+    {{ partial "mobile/footer.html" . }}
 </body>
 </html>
+{{ end }}
