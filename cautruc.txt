@@ -1,10 +1,14 @@
 agx-mobile-theme/
 │
-├── go.mod
 ├── layouts/
-│     └── mobile/
-│            ├── baseof.html
-│            ├── index.html
-│            └── single.html
-└── assets/
-       └── css/mobile.css
+│    └── mobile/
+│         ├── baseof.html      (khung tổng)
+│         ├── index.html       (danh sách)
+│         ├── single.html      (chi tiết bài viết)
+│         └── partials/
+│               ├── head.html
+│               ├── header.html
+│               ├── footer.html
+│               └── menu.html
+│
+└── assets/css/mobile.css

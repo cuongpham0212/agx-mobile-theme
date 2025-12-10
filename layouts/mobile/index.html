@@ -1,9 +1,13 @@
 {{ define "main" }}
+
 <div class="mobile-list">
     {{ range .Pages }}
-        <a class="mobile-item" href="{{ .RelPermalink }}">
+    <a class="mobile-item" href="{{ .RelPermalink }}">
+        <div class="mobile-card">
             <h2>{{ .Title }}</h2>
-        </a>
+        </div>
+    </a>
     {{ end }}
 </div>
+
 {{ end }}

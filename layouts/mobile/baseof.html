@@ -7,11 +7,12 @@
 <body class="mobile">
     {{ partial "mobile/header.html" . }}
 
-    <main class="mobile-container">
+    {{ if or .Params.thumbs .Params.images }}
+        {{ template "mobile/gallery.html" . }}
+    {{ else }}
         {{ block "main" . }}{{ end }}
-    </main>
+    {{ end }}
 
-    {{ partial "mobile/footer.html" . }}
 </body>
 </html>
 {{ end }}

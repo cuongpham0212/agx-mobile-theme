@@ -1,0 +1,24 @@
+<div class="mobile-header">
+    <div class="header-left">
+        <button id="menuToggle" class="menu-btn">☰</button>
+    </div>
+
+    <div class="header-title">
+        AGX
+    </div>
+
+    <div class="header-right"></div>
+</div>
+
+{{ partial "mobile/menu.html" . }}
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const menu = document.getElementById("mobileMenu");
+    const toggle = document.getElementById("menuToggle");
+
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("open");
+    });
+});
+</script>

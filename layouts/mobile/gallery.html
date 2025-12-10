@@ -1,0 +1,25 @@
+{{ define "main" }}
+<link rel="stylesheet" href="{{ "css/mobile-gallery.css" | relURL }}">
+<script defer src="{{ "js/mobile-gallery.js" | relURL }}"></script>
+
+{{ $thumbs := .Params.thumbs }}
+{{ $images := .Params.images }}
+
+<div class="gallery-grid"
+     data-images='{{ jsonify $images }}'>
+
+    {{ if $thumbs }}
+        {{ range $thumbs }}
+            {{ partial "mobile/gallery_item.html" (dict "src" .) }}
+        {{ end }}
+    {{ else }}
+        {{ range $images }}
+            {{ partial "mobile/gallery_item.html" (dict "src" .) }}
+        {{ end }}
+    {{ end }}
+
+</div>
+
+{{ partial "mobile/gallery_viewer.html" . }}
+
+{{ end }}
